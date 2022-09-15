@@ -55,10 +55,20 @@ Using the burger object below do the following:
 const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  
+  category: "Lunch",
+  discount: function(string){
+    if(string == 'student'){
+      return burger.price * 0.75;
+    }else if(string == 'teacher') {
+      return burger.price * 0.75
+    }else if(string == 'public') {
+      return burger.price * 0.90
+    }
+  } 
 }
-
+console.log(burger.discount('public'))
+console.log(burger.discount('teacher'))
+console.log(burger.discount('student'))
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -77,6 +87,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+console.log(reviews[5].feedback)
 
 
 
@@ -85,8 +96,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weedkays"
+console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array. 
@@ -100,9 +111,14 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(/*your code here*/) {
+ 
+  /*your code here*/
 }
+  
+
+
+
 
 
 
